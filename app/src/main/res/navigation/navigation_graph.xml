@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/A">
+
+    <fragment
+        android:id="@+id/A"
+        android:name="kr.co.lee.navigationcomponentexample.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_A_to_D"
+            app:destination="@id/D" />
+    </fragment>
+    <fragment
+        android:id="@+id/B"
+        android:name="kr.co.lee.navigationcomponentexample.SecondFragment"
+        android:label="SecondFragment" />
+    <fragment
+        android:id="@+id/C"
+        android:name="kr.co.lee.navigationcomponentexample.ThirdFragment"
+        android:label="ThirdFragment" />
+    <fragment
+        android:id="@+id/D"
+        android:name="kr.co.lee.navigationcomponentexample.DataFragment"
+        android:label="DataFragment">
+        <argument
+            android:name="message"
+            android:defaultValue="No Message"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
